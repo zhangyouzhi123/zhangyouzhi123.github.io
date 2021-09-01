@@ -71,6 +71,71 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-appium元素定位" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/01/appium%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/" class="article-date">
+  <time class="dt-published" datetime="2021-09-01T10:32:36.488Z" itemprop="datePublished">2021-09-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>元素定位<br>与Web自动化测试一样，app自动化测试过程中最重要一个环节就是元素定位，只有准确定位到了元素才能进行相关元素的操作，如输入、点击、拖拽、滑动等。<br>appium提供了许多元素定位的方法，如id定位、name定位、class定位、层级定位等等.<br>一、元素定位方式<br>1)id<br>2)name<br>3)class<br>4)List定位<br>5)相对定位<br>6)Xpath定位<br>7)H5页面元素定位<br>8)Uiautomator定位<br>二、id定位<br>Appium中可以使用 find_element_by_id() 方法来进行id定位。<br>1)测试场景1<br>1.安装考研帮kaoyan3.1.0.apk<br>2.点击升级页面取消按钮<br>3.点击引导页面的跳过按钮<br>2)脚本实现<br>from  appium import webdriver</p>
+<p>desired_caps={}<br>desired_caps[‘platformName’]=’Android’<br>desired_caps[‘deviceName’]=’127.0.0.1:62025’<br>desired_caps[‘platforVersion’]=’5.1.1’</p>
+<p>desired_caps[‘app’]=r’D:\kaoyan3.1.0.apk’<br>desired_caps[‘appPackage’]=’com.tal.kaoyan’<br>desired_caps[‘appActivity’]=’com.tal.kaoyan.ui.activity.SplashActivity’</p>
+<p>driver=webdriver.Remote(‘<a target="_blank" rel="noopener" href="http://localhost:4723/wd/hub&#39;,desired_caps">http://localhost:4723/wd/hub&#39;,desired_caps</a>)<br>driver.implicitly_wait(5)</p>
+<p>driver.find_element_by_id(‘android:id/button2’).click()<br>driver.find_element_by_id(‘com.tal.kaoyan:id/tv_skip’).click()</p>
+<p>三、思考<br>如果安装的版本最新的包，或者升级到了最新的版本，则启动后没有升级弹窗元素该如何处理？<br>跳过引导页面首次启动和非首次启动场景该如何处理？<br>方案探索1——if条件判断<br>你可能想到用if来做条件判断？判断元素是否存在，存在则点击，不存在则跳过。<br>from  appium import webdriver</p>
+<p>desired_caps={}<br>desired_caps[‘platformName’]=’Android’<br>desired_caps[‘deviceName’]=’127.0.0.1:62025’<br>desired_caps[‘platforVersion’]=’7.1.2’</p>
+<p>desired_caps[‘app’]=r’D:\kaoyan3.1.0.apk’<br>desired_caps[‘appPackage’]=’com.tal.kaoyan’<br>desired_caps[‘appActivity’]=’com.tal.kaoyan.ui.activity.SplashActivity’</p>
+<p>desired_caps[‘noReset’]=’True’</p>
+<p>driver=webdriver.Remote(‘<a target="_blank" rel="noopener" href="http://localhost:4723/wd/hub&#39;,desired_caps">http://localhost:4723/wd/hub&#39;,desired_caps</a>)<br>driver.implicitly_wait(5)<br>cancelBtn=driver.find_element_by_id(‘android:id/button2’)<br>skipBtn=driver.find_element_by_id(‘com.tal.kaoyan:id/tv_skip’)</p>
+<p>if cancelBtn:<br>    cancelBtn.click()<br>else:<br>    print(‘no cancelBtn’)</p>
+<p>if skipBtn:<br>    skipBtn.click()<br>else:<br>    print(‘no skipBtn’)</p>
+<p>定位不到元素：<br>报异常<br>selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.</p>
+<p>方案探索2——异常捕捉<br>既然上面的if语句判断无法生效，但是我们发现一个突破口，那就是捕捉NoSuchElementException异常。<br>from  appium import webdriver<br>from selenium.common.exceptions import NoSuchElementException</p>
+<p>desired_caps={}<br>desired_caps[‘platformName’]=’Android’<br>desired_caps[‘deviceName’]=’127.0.0.1:62025’<br>desired_caps[‘platforVersion’]=’7.1.2’</p>
+<p>desired_caps[‘app’]=r’d:\kaoyan3.1.0.apk’<br>desired_caps[‘appPackage’]=’com.tal.kaoyan’<br>desired_caps[‘appActivity’]=’com.tal.kaoyan.ui.activity.SplashActivity’</p>
+<p>desired_caps[‘noReset’]=’True’</p>
+<p>driver=webdriver.Remote(‘<a target="_blank" rel="noopener" href="http://localhost:4723/wd/hub&#39;,desired_caps">http://localhost:4723/wd/hub&#39;,desired_caps</a>)<br>driver.implicitly_wait(5)</p>
+<p>def check_cancelBtn():<br>    print(“check_cancelBtn”)<br>    try:<br>        cancelBtn = driver.find_element_by_id(‘android:id/button2’)<br>    except NoSuchElementException:<br>        print(‘no CancelBtn’)<br>    else:<br>        cancelBtn.click()</p>
+<p>def check_skipBtn():<br>    print(“check_skipBtn”)<br>    try:<br>        skipBtn = driver.find_element_by_id(‘com.tal.kaoyan:id/tv_skip’)<br>    except NoSuchElementException:<br>        print(‘check_skipBtn’)<br>    else:<br>        skipBtn.click()</p>
+<p>#check_updateBtn()</p>
+<p>check_skipBtn()</p>
+<p>四、id定位综合实践——自动登录<br>测试场景<br>1.启动App，进入到登录界面<br>2.在登录页面输入用户名“liubo10010”，密码‘liubo10010’ 然后点击登录。<br>需求分析<br>1.可以把启动后检测升级弹窗和引导页面的模块抽离作为独立的模块被其他模块调用，提高代码复用率。<br>2.获取用户名密码输入框和登录按钮的元素id属性,另外要考虑启动时App之前是否登录过账号，已经登录过和未登录场景流程不一样。<br>3.注意：send_keys()传入中文时需要在capability中配置如下内容：<br>desired_caps[‘unicodeKeyboard’]=”True”<br>desired_caps[‘resetKeyboard’]=”True”<br>设置之后会有Appium的输入法守护来执行输入操作<br>代码实现<br>from  appium import webdriver<br>from selenium.common.exceptions import NoSuchElementException</p>
+<p>desired_caps={}<br>desired_caps[‘platformName’]=’Android’<br>desired_caps[‘deviceName’]=’127.0.0.1:62025’<br>desired_caps[‘platforVersion’]=’7.1.2’</p>
+<p>desired_caps[‘app’]=r’d:\kaoyan3.1.0.apk’<br>desired_caps[‘appPackage’]=’com.tal.kaoyan’<br>desired_caps[‘appActivity’]=’com.tal.kaoyan.ui.activity.SplashActivity’</p>
+<p>desired_caps[‘noReset’]=’True’</p>
+<p>driver=webdriver.Remote(‘<a target="_blank" rel="noopener" href="http://localhost:4723/wd/hub&#39;,desired_caps">http://localhost:4723/wd/hub&#39;,desired_caps</a>)<br>driver.implicitly_wait(5)</p>
+<p>def check_cancelBtn():<br>    print(“check_cancelBtn”)<br>    try:<br>        cancelBtn = driver.find_element_by_id(‘android:id/button2’)<br>    except NoSuchElementException:<br>        print(‘no CancelBtn’)<br>    else:<br>        cancelBtn.click()</p>
+<p>def check_skipBtn():<br>    print(“check_skipBtn”)<br>    try:<br>        skipBtn = driver.find_element_by_id(‘com.tal.kaoyan:id/tv_skip’)<br>    except NoSuchElementException:<br>        print(‘check_skipBtn’)<br>    else:<br>        skipBtn.click()</p>
+<p>#check_updateBtn()</p>
+<p>check_skipBtn()</p>
+<p>def login():<br>    driver.find_element_by_id(‘com.tal.kaoyan:id/login_email_edittext’).clear()<br>    driver.find_element_by_id(‘com.tal.kaoyan:id/login_email_edittext’).send_keys(‘liubo10010’)</p>
+<pre><code>driver.find_element_by_id(&#39;com.tal.kaoyan:id/login_password_edittext&#39;).send_keys(&#39;liubo10010&#39;)
+driver.find_element_by_id(&#39;com.tal.kaoyan:id/login_login_btn&#39;).click()
+</code></pre>
+<p>try:<br>    driver.find_element_by_id(‘com.tal.kaoyan:id/mainactivity_button_mysefl’)<br>except NoSuchElementException:<br>    login()<br>else:<br>    driver.find_element_by_id(‘com.tal.kaoyan:id/mainactivity_button_mysefl’).click()<br>    driver.find_element_by_id(‘com.tal.kaoyan:id/activity_usercenter_username’).click()<br>    login()</p>
+<p>注意：<br>使用Appium做了输入操作之后，如果出现输入法无法唤起，可以在系统设置——语言和输入法——将当前输入法替换为系统输入法或者其他输入法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/01/appium%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/" data-id="ckt1d35q30000mguycjyv5yst" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-缺陷" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/09/01/%E7%BC%BA%E9%99%B7/" class="article-date">
@@ -645,6 +710,10 @@
       <ul>
         
           <li>
+            <a href="/2021/09/01/appium%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2021/09/01/%E7%BC%BA%E9%99%B7/">(no title)</a>
           </li>
         
@@ -658,10 +727,6 @@
         
           <li>
             <a href="/2021/08/31/appium/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/08/30/hello-world/">Hello World</a>
           </li>
         
       </ul>
