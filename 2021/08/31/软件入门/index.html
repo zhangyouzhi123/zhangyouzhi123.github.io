@@ -14,7 +14,7 @@
 <meta property="og:description" content="软件研发流程软件产品的特点 是一种逻辑产品，与物质产品有很大的区别。 软件产品的生产主要是研制，生产成本主要在开发和研制，开发研制完成后，通过复制就产生了大量软件产品。 软件产品不会用坏，不存在磨损，消耗。 生产主要是脑力劳动，还末完全摆脱手工开发方式，大部分产品是”定做”的  1.什么是软件工程？软件工程一直以来都缺乏一个统一的定义，很多学者、组织机构都分别给出了自己的定义。但具体总结起来就是几">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-31T09:44:11.000Z">
-<meta property="article:modified_time" content="2021-08-31T10:12:02.400Z">
+<meta property="article:modified_time" content="2021-09-01T08:45:41.061Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -220,6 +220,19 @@
 <p>当测试人员发现缺陷以后，会将缺陷提交给开发人员，开发人员对程序进行修改，修改之后，测试人员会对修改后的程序重新进行测试，确认原有的缺陷已经消除并且没有引入新的缺陷，这个重新测试的过程就叫作回归测试。回归测试是软件测试工作中非常重要的一部分，软件开发的各个阶段都会进行多次回归测试。</p>
 <p><strong>④</strong>　<strong>随机测试</strong></p>
 <p>随机测试是没有测试用例、检查列表、脚本或指令的测试，它主要是根据测试人员的经验对软件进行功能和性能抽查。随机测试是根据测试用例说明书执行测试用例的重要补充手段，是保证测试覆盖完整性的有效方式和过程</p>
+<p>三、软件测试的流程</p>
+<p>在企业中，一般测试流程是怎么样的呢？</p>
+<ol>
+<li>   测试需求分析阶段：<br>阅读需求，理解需求，主要就是对业务的学习，分析需求点，参与需求评审会议;</li>
+<li>   测试计划阶段：<br>根据自己的角色说明 如:测试经理主要任务就是编写测试计划，参考软件需求规格说明书，项目总体计划，内容包括测试范围(来自需求文档)，进度安排，人力物力的分配，整体测试策略的制定。风险评估与规避措施有一个制定。测试人员的话一般是领取分配的测试任务;</li>
+<li>   测试设计阶段：<br>主要是编写测试用例，会参考需求文档(原型图)，概要设计，详细设计等文档，用例编写完成之后会进行评审;</li>
+<li>   测试执行阶段：<br>搭建环境，执行冒烟测试(预测试)，然后进入正式测试，bug管理,根据公司情况进行日报,周报跟踪进度及风险控制;</li>
+<li>   测试评估阶段：<br>出测试报告，确认是否可以上线。</li>
+</ol>
+<p>四、测试相关文档介绍<br>在软件研发过程当中，会产生很多的文档，下面罗列测试阶段所产生的文档，包含但不仅限于如下文档。<br>文档的名称    包括但不限于以下内容    文档编写目的<br>测试计划    测试的范围、测试的准则、测试的手段、测试工具、停止的标准、硬/软件环境、测试规划、测试执行、工作量预估、资源安排、进度安排、风险管理等。    明确测试工作内容（范围）、测试工作的方法以及测试工作所需要的各种资源。</p>
+<p>测试用例    用例编号、用例名称、测试背景、测试数据、操作步骤、预期结果、实际结果、优先级、重要级、编写人、执行人、备注等。        避免漏测、多测，能够对项目的需求做一个理解，可以作为测试人员工作量的一个考核。<br>缺陷报告    缺陷编号、缺陷描述、严重度、缺陷状态、发现人、发现时间、修复时间、所属版本、所属模块、修复的优先级、详细描述、下一步处理人等。      把软件存在的缺陷准确的描述出来，便于开发人员修正，反映了当前产品的质量状态，更是测试人员价值的体现。<br>测试报告    包括项目背景、需求分析、测试时间、测试环境、评审记录、测试范围、测试用例、功能实现清单、缺陷统计、测试统计(包含资源、执行、问题统计)、测试总结是否通过、测试的风险。<br>    把测试的过程和结果写成文档，对发现的问题和缺陷进行分析，为纠正软件的存在的质量问题提供依据，同时为软件验收和交付打下基础。<br>测试日、周报    1.当前测试进度的关键性数据(用例执行进度、发现问题情况、待回归的问题)2.遇到哪些测试活动中不能解决的问题风险，需要什么样的帮助。3.下一阶段的工作计划是什么？    要求内容是每日/周测试活动的概述，和下一天/周测试活动的计划，要求反映出当前测试进度，成果及问题。</p>
+<p>五、svn服务器的搭建<br>1.Svn版本控制工具的介绍：<br>Subversion(SVN) 是一个开源的版本控制系統, 这些数据放置在一个中央资料档案库(repository) 中。 这个档案库很像一个普通的文件服务器, 不过它会记住每一次文件的变动。 这样你就可以把档案恢复到旧的版本, 或是浏览文件的变动历史。<br>SVN的作用相当于大家获取资源的公共平台，比如：开发会把自己的代码放到SVN中，你要测试的时候可以从SVN里下载最新的代码到本地进行测试，同时你的测试报告等也可以上传的SVN和其他的测试人员进行交流。</p>
+<p>可以理解为Subversion(SVN)需要一个服务端（对文件集中管理——VisualSVN），普通用户安装客户端（TortoiseSVN ）方式来连接上服务器进行工作。<br>2.Svn服务器的安装与配置：<br>软件下载链接：<br><a target="_blank" rel="noopener" href="https://www.visualsvn.com/files/VisualSVN-Server-4.3.3-x64.msi">https://www.visualsvn.com/files/VisualSVN-Server-4.3.3-x64.msi</a></p>
 
       
     </div>
@@ -233,6 +246,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2021/09/01/%E8%BD%AF%E4%BB%B6%E5%85%A5%E9%97%A82/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
     <a href="/2021/08/31/appium/" id="article-nav-older" class="article-nav-link-wrap">
@@ -262,7 +284,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li></ul>
     </div>
   </div>
 
@@ -273,6 +295,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/09/01/%E8%BD%AF%E4%BB%B6%E5%85%A5%E9%97%A82/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2021/08/31/%E8%BD%AF%E4%BB%B6%E5%85%A5%E9%97%A8/">软件入门</a>
