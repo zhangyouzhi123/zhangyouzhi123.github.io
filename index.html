@@ -71,6 +71,109 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-linx目录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/02/linx%E7%9B%AE%E5%BD%95/" class="article-date">
+  <time class="dt-published" datetime="2021-09-02T09:56:02.008Z" itemprop="datePublished">2021-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、Linux-的目录"><a href="#一、Linux-的目录" class="headerlink" title="一、Linux 的目录"></a>一、<strong>Linux 的目录</strong></h2><p>cd  /：进入linux的根目录</p>
+<p>然后ll指令，下面图是linux的文件目录，linux中是一切皆文件</p>
+<p>认识一下目录：</p>
+<p>Bin目录：可执行文件</p>
+<p>Etc目录：存放系统的配置文件</p>
+<p>Home:用户的根目录</p>
+<p>Opt:安装程序文件存放的位置</p>
+<p>Dev：存放设备文件</p>
+<p>Lib：存放系统所需要的运行程序文件(打补丁)</p>
+<p>文件列出命令：</p>
+<p>Ls:  列出当前目录里面所有的文件和文件夹</p>
+<p>Ll: 列出当前目录里面所有的文件和文件夹详细信息</p>
+<p>Ls  -a:列出所有文件和文件夹(包含隐藏文件)</p>
+<p>访问命令：</p>
+<p>cd  文件夹名 ：访问某个文件夹</p>
+<p>cd  文件夹1/文件夹2</p>
+<p>cd  ../  返回上一级</p>
+<p> 创建文件夹：</p>
+<p>Mkdir  文件夹名字</p>
+<p>Mkdir  -p  文件夹1/文件夹2/….</p>
+<p>删除空文件夹：</p>
+<p>Rmdir  文件夹名</p>
+<p>浏览文件的指令</p>
+<p>Cat：访问的是文件的最后面的部分</p>
+<p>More: 访问文件，它会显示文件的百分比，按下空格键进行切换。</p>
+<p>Less: 访问文件内容：根据pgup和pgdn来进行上下翻页</p>
+<p>Tail:</p>
+<p>tail 文件名:访问文件</p>
+<p>tail -数字 文件名：访问后几行</p>
+<p>你一般是怎么去查看服务器的日志文件的？？？</p>
+<p>Tail  服务器/logs/catalina.日期</p>
+<p>删除命令：</p>
+<p>Rm 文件名   ——询问式删除</p>
+<p>Rm - rf  文件名  ——不询问式删除</p>
+<p>Rm  -rf  ./*    ——删除掉当前目录下面所有的文件和文件夹</p>
+<p>rm  -rf  *    自杀式删除</p>
+<p>复制、粘贴：</p>
+<p>Cp  源文件  目标文件夹</p>
+<p>剪切：</p>
+<p>Mv  源文件  目标文件夹</p>
+<p>打包压缩、解压</p>
+<p>Tar  -参数  压缩包名  ./*</p>
+<p>压缩：</p>
+<p>Tar  -czvf  X.gz  ./*</p>
+<p>解压：</p>
+<p>Tar  -xvf  x.gz </p>
+<p>创建文件编辑信息：</p>
+<p>Vi  文件名</p>
+<p>按下“i”键进入  insert模式</p>
+<p>输入文字</p>
+<p>保存：</p>
+<p>Esc  —&gt;输入“：wq”</p>
+<p>不保存：</p>
+<p>Esc—-&gt;输入“q!”</p>
+<p>Vi与vim大致相同！</p>
+<h2 id="一、把文件传输linux服务器上面"><a href="#一、把文件传输linux服务器上面" class="headerlink" title="一、把文件传输linux服务器上面"></a>一、<strong>把文件传输linux服务器上面</strong></h2><p><strong>使用ftp工具来传输</strong></p>
+<p><strong>ftp协议：文件传输协议</strong></p>
+<h2 id="一、在linux服务器上面安装jdk环境"><a href="#一、在linux服务器上面安装jdk环境" class="headerlink" title="一、在linux服务器上面安装jdk环境"></a>一、<strong>在linux服务器上面安装jdk环境</strong></h2><p>①　把jdk的linux版本上传上去</p>
+<p>②　查询linux系统自带的版本</p>
+<p>Java  -version</p>
+<p>查询全部的jdk版本：</p>
+<p>rpm  -qa | grep  java</p>
+<p>③　卸载版本</p>
+<p>Rpm  -e  - -nodeps  版本号</p>
+<p>一条一条删除</p>
+<p>安装：</p>
+<p>在 usr/local/src里面创建一个java文件夹</p>
+<p>在上述java文件夹里面，把jdk的安装包传输过来</p>
+<p>解压jdk的文件</p>
+<p>\1. 安装依赖：yum install glibc.i686</p>
+<p>​     去修改配置文件  etc/profile   最后面加上下面这段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#set java environment</span><br><span class="line">	JAVA_HOME=/usr/local/src/java/jdk1.7.0_71</span><br><span class="line">	CLASSPATH=.:$JAVA_HOME/lib.tools.jar</span><br><span class="line">	PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">	export JAVA_HOME CLASSPATH PATH</span><br></pre></td></tr></table></figure>
+
+<p>加载配置文件： source  etc/profile</p>
+<p>最后验证：java -version</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/02/linx%E7%9B%AE%E5%BD%95/" data-id="ckt2ravu10000uwuyhobzgrfn" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-appium元素定位" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/09/01/appium%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/" class="article-date">
@@ -710,6 +813,10 @@ driver.find_element_by_id(&#39;com.tal.kaoyan:id/login_login_btn&#39;).click()
       <ul>
         
           <li>
+            <a href="/2021/09/02/linx%E7%9B%AE%E5%BD%95/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2021/09/01/appium%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/">(no title)</a>
           </li>
         
@@ -723,10 +830,6 @@ driver.find_element_by_id(&#39;com.tal.kaoyan:id/login_login_btn&#39;).click()
         
           <li>
             <a href="/2021/08/31/%E8%BD%AF%E4%BB%B6%E5%85%A5%E9%97%A8/">软件入门</a>
-          </li>
-        
-          <li>
-            <a href="/2021/08/31/appium/">(no title)</a>
           </li>
         
       </ul>
