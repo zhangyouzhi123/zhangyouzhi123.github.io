@@ -71,6 +71,154 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-mysql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/02/mysql/" class="article-date">
+  <time class="dt-published" datetime="2021-09-02T10:03:50.290Z" itemprop="datePublished">2021-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一、在linux上面安装好mysql"><a href="#一、在linux上面安装好mysql" class="headerlink" title="一、在linux上面安装好mysql"></a>一、<strong>在linux上面安装好mysql</strong></h1><p>准备：mysql(linux版本)</p>
+<p>步骤：</p>
+<p>\1. 传上去，在usr/local/src 在这里创建一个mysql的文件夹</p>
+<p>\2. 检测一下自己的系统是否自带mysql</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep mysql </span><br></pre></td></tr></table></figure>
+
+<p>\1. 卸载掉自带的mysql版本</p>
+<p>rpm -e –nodeps 版本号</p>
+<p>在文件夹里面，解压mysql</p>
+<p>\1. 安装server</p>
+<p>指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh   MySQL-server-5.6.22-1.el6.i686.rpm</span><br></pre></td></tr></table></figure>
+
+<p>安装依赖：yum -y install libaio.so.1 libgcc_s.so.1 libstdc++.so.6 </p>
+<p>libstdc++-4.4.7-4.el6.x86_64<br>    yum  update libstdc++-4.4.7-4.el6.x86_64</p>
+<p>\1. 安装client(客户端)</p>
+<p>如果安装client的时候，遇到error,则继续安装依赖</p>
+<p>安装依赖：yum -y install libncurses.so.5 libtinfo.so.5</p>
+<p>\1. 查询mysql的服务状态</p>
+<p> 服务端与客户端安装完毕</p>
+<p> 查询mysql的服务的状态</p>
+<p>service  mysql  status</p>
+<p>说明服务没有启动，接着启动服务</p>
+<p>service mysql start</p>
+<p>Mysql的服务启动成功</p>
+<p>\1. 使用root来登陆mysql(忽视)</p>
+<p>\1. 去找登陆密码：必须进入root目录里面来</p>
+<p>root用户目录里面，去找一个隐藏文件</p>
+<p>.mysql_secret</p>
+<p>\1. 使用查看隐藏文件的指令  ll -a</p>
+<p>\1. 使用vi编辑器去打开这个文件</p>
+<p>  vi  .mysql_secret</p>
+<p>复制下面这段原始密码–记得退出不要保存</p>
+<p>lyv87tdvlw_0husj</p>
+<p>\1. 使用mysql的root账户来登陆</p>
+<p>  mysql -uroot -p</p>
+<p>\1. 输入刚刚复制的密码，然后登陆成功。 Lyv87TDvlw_0hUSJ(是我的原始密码)</p>
+<p>\1. 登陆进来第一件事，改密码：</p>
+<p>修改root密码：SET PASSWORD = PASSWORD(‘123456’);</p>
+<p>密码修改成功，输入“exit;”退出</p>
+<p> \1. 把mysql加入到系统的自启动</p>
+<p>chkconfig –add mysql</p>
+<p>\1. mysql自动启动</p>
+<p>chkconfig mysql on</p>
+<p>完成上述步骤，我们在linux上面安装好了mysql，mysql的服务也会随着linux系统启动而启动，但是它还不能支持远程访问。</p>
+<p> \1. 开启远程访问(必须登陆进去)</p>
+<p>A. 登陆到mysql当中去：</p>
+<p>​    mysql -uroot -p</p>
+<p>B. 设置mysql的远程访问的规则：</p>
+<p> grant all privileges on <em>.</em> to ‘root’ @’%’ identified by ‘123456’; </p>
+<p>​    Flush privileges;</p>
+<p>\1. 打开防火墙规则，开启mysql的3306端口（必须退出mysql的登陆状态）</p>
+<p>/sbin/iptables -I INPUT -p tcp –dport 3306 -j ACCEPT/etc/rc.d/init.d/iptables save/etc/init.d/iptables status</p>
+<p>完成这一步，我们基本上可以去远程来访问我们mysql服务了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/02/mysql/" data-id="ckt2rok9l0001v0uyaqwv6js6" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ftp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/02/ftp/" class="article-date">
+  <time class="dt-published" datetime="2021-09-02T10:00:36.000Z" itemprop="datePublished">2021-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/02/ftp/">ftp</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、Linux上面部署jdk软件"><a href="#一、Linux上面部署jdk软件" class="headerlink" title="一、Linux上面部署jdk软件"></a>一、<strong>Linux上面部署jdk软件</strong></h2><p>\1. 通过ftp软件把jdk的安装包上传到Linux服务器上面</p>
+<p>(1) 要配置jdk之前准备：</p>
+<p>查询一下Linux系统自带的版本</p>
+<p>Java -version</p>
+<p>查询全部的jdk版本：</p>
+<p>rpm  -qa | grep  java</p>
+<p>根据版本号来卸载掉:</p>
+<p>rpm  -e  –nodeps 版本号</p>
+<p>如何检验卸载自带的完毕： </p>
+<p>下面这条指令查询完毕，没有任何提示，则表示卸载完毕</p>
+<p>rpm -qa | grep  java</p>
+<p>安装jdk的具体步骤：</p>
+<p>\1. 进入  usr/local/src 里面，创建一个 java的文件夹</p>
+<p>\2. 把jdk程序直接传到这个java文件里面</p>
+<p>\3. 解压：  tar  -xvf  jdk-7u71-linux-i586.tar.gz</p>
+<p>\4. 安装依赖环境： yum install glibc.i686</p>
+<p>\5. 【进入根目录】修改配置文件： vi etc/profile</p>
+<p>在末尾追加下面代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#set java environment</span><br><span class="line">	JAVA_HOME=/usr/local/src/java/jdk1.7.0_71</span><br><span class="line">	CLASSPATH=.:$JAVA_HOME/lib.tools.jar</span><br><span class="line">	PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">	export JAVA_HOME CLASSPATH PATH</span><br></pre></td></tr></table></figure>
+
+<p>\1. 加载配置文件：  source  etc/profile</p>
+<p>\2. 通过查询 jdk版本的指令：java -version</p>
+<h2 id="一、Linux搭建tomcat服务器"><a href="#一、Linux搭建tomcat服务器" class="headerlink" title="一、Linux搭建tomcat服务器"></a>一、<strong>Linux搭建tomcat服务器</strong></h2><p>\1. 创建tomcat文件夹【usr/local/src/tomcat】，上传tomcat的包,解压</p>
+<p>\2. 传tomcat的包到该文件夹里面，然后解压</p>
+<p>(1) sh  startup.sh  开服务</p>
+<p>(2) sh  shutdown.sh  关服务</p>
+<p>\3. 做到这一步，服务器正常开关没问题，但是不能进行远程访问，因为需要设置防火墙。设置防火墙规则的代码：</p>
+<p>/sbin/iptables -I INPUT -p tcp –dport 8080 -j ACCEPT/etc/rc.d/init.d/iptables save</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/02/ftp/" data-id="ckt2rok9i0000v0uyb9j51coi" data-title="ftp" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-linx目录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/09/02/linx%E7%9B%AE%E5%BD%95/" class="article-date">
@@ -813,6 +961,14 @@ driver.find_element_by_id(&#39;com.tal.kaoyan:id/login_login_btn&#39;).click()
       <ul>
         
           <li>
+            <a href="/2021/09/02/mysql/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/02/ftp/">ftp</a>
+          </li>
+        
+          <li>
             <a href="/2021/09/02/linx%E7%9B%AE%E5%BD%95/">(no title)</a>
           </li>
         
@@ -822,14 +978,6 @@ driver.find_element_by_id(&#39;com.tal.kaoyan:id/login_login_btn&#39;).click()
         
           <li>
             <a href="/2021/09/01/%E7%BC%BA%E9%99%B7/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/09/01/%E8%BD%AF%E4%BB%B6%E5%85%A5%E9%97%A82/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/08/31/%E8%BD%AF%E4%BB%B6%E5%85%A5%E9%97%A8/">软件入门</a>
           </li>
         
       </ul>
