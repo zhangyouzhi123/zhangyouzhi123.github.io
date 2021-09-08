@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、什么是javascriptJavaScript 是可插入 HTML 页面的编程代码。 JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。 这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。 Js学习的时候，了解三部分：  es语法、浏览器[BOM]对象、文档【DOM】对象 二、Es语法1. js的快速入门——写法内嵌在s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/09/08/javascript/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、什么是javascriptJavaScript 是可插入 HTML 页面的编程代码。 JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。 这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。 Js学习的时候，了解三部分：  es语法、浏览器[BOM]对象、文档【DOM】对象 二、Es语法1. js的快速入门——写法内嵌在s">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6138802344eaada739fcb9a4.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388af744eaada7390df79c.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388b7444eaada7390ea594.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388b8444eaada7390ec015.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388bad44eaada7390efdfe.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388bbd44eaada7390f1ca6.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388bf544eaada7390f6a48.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388c6744eaada739100e98.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388ca244eaada7391061ec.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61388cad44eaada739106fcf.jpg">
+<meta property="article:published_time" content="2021-09-08T09:00:32.734Z">
+<meta property="article:modified_time" content="2021-09-08T10:13:26.062Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/6138802344eaada739fcb9a4.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-javascript" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/08/javascript/" class="article-date">
+  <time class="dt-published" datetime="2021-09-08T09:00:32.734Z" itemprop="datePublished">2021-09-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、什么是javascript"><a href="#一、什么是javascript" class="headerlink" title="一、什么是javascript"></a>一、<strong>什么是javascript</strong></h2><p>JavaScript 是可插入 HTML 页面的编程代码。</p>
+<p>JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。</p>
+<p>这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。</p>
+<p>Js学习的时候，了解三部分：</p>
+<p> es语法、浏览器[BOM]对象、文档【DOM】对象</p>
+<h2 id="二、Es语法"><a href="#二、Es语法" class="headerlink" title="二、Es语法"></a>二、<strong>Es语法</strong></h2><h3 id="1-js的快速入门——写法"><a href="#1-js的快速入门——写法" class="headerlink" title="1. js的快速入门——写法"></a>1. <strong>js的快速入门——写法</strong></h3><p>内嵌在script标签</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			alert(&quot;123&quot;)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-js的输出"><a href="#1-js的输出" class="headerlink" title="1. js的输出"></a>1. <strong>js的输出</strong></h3><p>Document.write( ):输出内容在网页上面</p>
+<p>Console.log()  : 输出内容在控制台上面</p>
+<h3 id="2-变量、数据类型："><a href="#2-变量、数据类型：" class="headerlink" title="2. 变量、数据类型："></a>2. <strong>变量、数据类型：</strong></h3><p>变量：程序执行中，其值可以改变的量；变量是一个容器，存储数据。</p>
+<p>Var  a=10;</p>
+<p>Var:声明变量的关键字</p>
+<p>a是变量,在这个变量里面存了10</p>
+<p>变量取名的时候注意：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">变量必须以字母开头 </span><br><span class="line">变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做） </span><br><span class="line">变量名称对大小写敏感（y 和 Y 是不同的变量） </span><br></pre></td></tr></table></figure>
+
+<p>定义变量、输出变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			//声明一个变量</span><br><span class="line">			var  num1=false;  </span><br><span class="line">			//输出变量</span><br><span class="line">			document.write(num1)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>数据类型：</p>
+<p>Boolean  ——布尔</p>
+<p>string    ——字符串</p>
+<p>Number  ——数字</p>
+<p>Underfind—— 未定义的数据类型</p>
+<p>Js是一门弱类型的语言，数据类型的取值取决于赋给变量的值！！！</p>
+<p>①　Js的声明变量关键字是var</p>
+<p>②　js同时声明两个不同的数据类型</p>
+<p>③　js变量可以存放不同类型的值</p>
+<p>④　js变量名声明不是必须的 </p>
+<p>typeof（）检测数据类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num1=false;</span><br><span class="line">document.write(typeof(num1))</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-Js的运算符"><a href="#1-Js的运算符" class="headerlink" title="1. Js的运算符"></a>1. <strong>Js的运算符</strong></h3><p>算术： 加、减 、乘、除、++、–</p>
+<p>单独给某个变量++或者–的时候，它会自增1或自减1；</p>
+<p>比较：&gt;、&lt;  &gt;=  !=  &lt;=  </p>
+<p>区分：</p>
+<p>= :赋值  把右边赋值给左边</p>
+<p>==：比较两个值相等，不考虑数据类型</p>
+<p>=== ：考虑数据类型和值一样时，为true，否则false</p>
+<p>结果只有两种，true和false</p>
+<p>条件:   var n3=(n2&gt;n1)?n2:n1;</p>
+<p>解释：如果n2值大于n1，把n2的值赋给n3</p>
+<pre><code>      否则相反
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var n1=123;</span><br><span class="line">			var n2=25;</span><br><span class="line">			</span><br><span class="line">			var n3=(n2&gt;n1)?n2:n1;</span><br><span class="line">			document.write(n3)//25</span><br></pre></td></tr></table></figure>
+
+<p>逻辑:  &amp;&amp;  ||  ！</p>
+<p>逻辑运算符两边连接的是布尔类型的值</p>
+<p>赋值：    =  +=  -=  *=  /=</p>
+<p>把右边值赋值 运算符左边</p>
+<h3 id="1-程序的结构"><a href="#1-程序的结构" class="headerlink" title="1. 程序的结构"></a>1. <strong>程序的结构</strong></h3><p><strong>程序的结构：</strong></p>
+<p><strong>顺序结构【默认】：自上而下</strong></p>
+<p><strong>选择结构****：</strong></p>
+<p><strong>程序自上而下执行时，遇到了什么条件，就会做出什么选择！</strong></p>
+<p>​    <strong>结构</strong></p>
+<p>程序自上而下执行时，遇到了什么条件，就会做出循环</p>
+<p><strong>选择结构：  if….else</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//1.初始化值</span><br><span class="line">			var  age=10;</span><br><span class="line">			//2.判断条件</span><br><span class="line">			if(age&gt;=18)&#123;</span><br><span class="line">				//3.执行语句1</span><br><span class="line">				document.write(&quot;可以上网&quot;)</span><br><span class="line">			&#125;else&#123;</span><br><span class="line">                  //语句2</span><br><span class="line">				document.write(&quot;洗洗睡&quot;)</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>满足什么条件，就执行语句1，否则执行语句2</strong>  </p>
+<p>for循环：</p>
+<img src="https://pic.imgdb.cn/item/6138802344eaada739fcb9a4.jpg">
+
+<h3 id="1-数组"><a href="#1-数组" class="headerlink" title="1. 数组"></a>1. <strong>数组</strong></h3><p>什么是数组？——数据的容器</p>
+<p>存放一组数据(多个类型的)</p>
+<p>长度不是固定</p>
+<p>没有赋值定义的类型都是undefined</p>
+<p>怎么声明数组？</p>
+<p>var  数组名=new Array();</p>
+<p>var 数组名=new Array(“值1”，”值2”)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var arr=new Array(&quot;张三&quot;,&quot;李四&quot;,123);</span><br><span class="line">			document.write(arr.length)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>var 数组名=[“值1”,“值2”,”值3”]</p>
+<p>数组结合循环来做遍历</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var arr=new Array(&quot;张三&quot;,&quot;李四&quot;,123);</span><br><span class="line">//			document.write(arr[0])</span><br><span class="line">			for (var i=0;i&lt;arr.length;i++) &#123;</span><br><span class="line">				document.write(arr[i]);//0 1 2</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-字符串：“上海的自来水来自海上”"><a href="#1-字符串：“上海的自来水来自海上”" class="headerlink" title="1. 字符串：“上海的自来水来自海上”"></a>1. <strong>字符串：“上海的自来水来自海上”</strong></h3><p> CharAt():通过下标找单个字符</p>
+<p>indexOf:字符串中某一个指定的字符首次出现的位置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var str=&quot;上海的自来水来自海上&quot;;</span><br><span class="line">			//var n=str.charAt(0);</span><br><span class="line">			document.write(str.indexOf(&quot;上&quot;))</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://pic.imgdb.cn/item/61388af744eaada7390df79c.jpg">
+
+<h3 id="1-函数："><a href="#1-函数：" class="headerlink" title="1. 函数："></a>1. <strong>函数：</strong></h3><p><em><strong>*函数是由事件驱动的*</strong></em></p>
+<p><em><strong>*或者当它被*</strong></em><em><strong>*调用时*</strong></em><em><strong>*执行的*</strong></em><em><strong>*可重复*</strong></em><em><strong>*使用的*</strong></em><em><strong>*代码块*</strong></em><em><strong>*。*</strong></em></p>
+<p>系统函数与自定义 </p>
+<p><em><strong>*系统函数：*</strong></em></p>
+<p>——————————</p>
+<p>isNan()  值是数字给false，否则给true</p>
+<p>字符串转换成数字：</p>
+<p>parseInt（）【重点】</p>
+<p>格式： parseInt(转换的变量)</p>
+<p>注意：字符串转换的数字只能是字符串开头的数字</p>
+<p>parseFloat 【保留了小数】</p>
+<p>案例：</p>
+<p>前提：通过js代码输出html代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">document.write(&quot;&lt;font size=&#x27;24&#x27; color=&#x27;red&#x27;&gt;文字&lt;/font&gt;&lt;br/&gt;&quot;)</span><br><span class="line"></span><br><span class="line">		&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			for (var i=1;i&lt;=10;i++) &#123;</span><br><span class="line">				document.write(&quot;&lt;font size=&#x27;24&#x27; color=&#x27;red&#x27;&gt;文字&lt;/font&gt;&lt;br/&gt;&quot;)</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>请使用js来输出一个四行两列的表格！！！  偶数行为绿色，奇数行为红色</p>
+<p>自定义函数：</p>
+<p>自己来写函数</p>
+<p>****如果你想让你的函数运行有效果，必须绑定****事件【用户的动作——点击、打开了网页(加载)】</p>
+<p>函数语法：</p>
+<p>function  函数名(){</p>
+<p>   //代码块</p>
+<p>}</p>
+<p>事件：用户的动作——点击   onclick——点击事件</p>
+<p>\1. 先写好函数——这个函数具有什么功能？【里面代码块决定】</p>
+<p>\2. 往html标签【如按钮】绑定事件【点击】同时加上函数名()</p>
+<p>思路：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.用html写出效果</span><br><span class="line"></span><br><span class="line">2.写个函数，通过点击事件绑定 “计算”按钮</span><br><span class="line">	A.先获取1-2框里面的值，判断是什么类型？string--&gt;number</span><br><span class="line">	B.获取select的id--&gt;option的value--&gt;+ 、- 、* 、/</span><br><span class="line">	C.通过选择结构--&gt;根据用户选择+、-、*、/计算结果</span><br><span class="line">		if..else if  ...else</span><br><span class="line">	D.获取结果框的value,然后把计算结果赋值给它</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<p>参考计算器案例</p>
+<h3 id="9-Date对象"><a href="#9-Date对象" class="headerlink" title="9.Date对象:"></a><strong>9.Date对象:</strong></h3><p>日期对象用于处理日期和时间。</p>
+<p>定义日期：</p>
+<p>var  对象名 = new  Date()；</p>
+<p>或</p>
+<p>var  对象名 = new  Date(“2020-04-10”)；</p>
+<p>对象名.方法名()</p>
+<p>To方法组：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			//1.创建一个Date对象</span><br><span class="line">			var d=new Date();</span><br><span class="line">			</span><br><span class="line">			//2.调用方法</span><br><span class="line">			var n=d.toDateString()//转换成字符串</span><br><span class="line">			document.write(typeof(n))</span><br><span class="line">			document.write(n)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			//1.创建一个Date对象</span><br><span class="line">			var d=new Date();</span><br><span class="line">			//2.调用方法</span><br><span class="line">			var n=d.toString()//转换成字符串</span><br><span class="line">			document.write(typeof(n))</span><br><span class="line">			document.write(n)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var d=new Date();</span><br><span class="line">			var y=d.getFullYear()</span><br><span class="line">			document.write(y)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>[getDate()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_getDate.asp">www.w3school.com.cn/jsref/jsref_getDate.asp</a>)</th>
+<th>从 Date 对象返回一个月中的某一天 (1 ~ 31)。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[getDay()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_getDay.asp">www.w3school.com.cn/jsref/jsref_getDay.asp</a>)</td>
+<td>从 Date 对象返回一周中的某一天 (0 ~ 6)。</td>
+</tr>
+<tr>
+<td>[getMonth()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_getMonth.asp">www.w3school.com.cn/jsref/jsref_getMonth.asp</a>)</td>
+<td>从 Date 对象返回月份 (0 ~ 11)。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>[getHours()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_getHours.asp">www.w3school.com.cn/jsref/jsref_getHours.asp</a>)</th>
+<th>返回 Date 对象的小时 (0 ~ 23)。</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[getMinutes()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_getMinutes.asp">www.w3school.com.cn/jsref/jsref_getMinutes.asp</a>)</td>
+<td>返回 Date 对象的分钟 (0 ~ 59)。</td>
+<td></td>
+</tr>
+<tr>
+<td>[getSeconds()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_getSeconds.asp">www.w3school.com.cn/jsref/jsref_getSeconds.asp</a>)</td>
+<td>返回 Date 对象的秒数 (0 ~ 59)。</td>
+<td></td>
+</tr>
+<tr>
+<td>[getMilliseconds()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_getMilliseconds.asp">www.w3school.com.cn/jsref/jsref_getMilliseconds.asp</a>)</td>
+<td>返回 Date 对象的毫秒(0 ~ 999)。</td>
+<td></td>
+</tr>
+<tr>
+<td>[getTime()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_getTime.asp">www.w3school.com.cn/jsref/jsref_getTime.asp</a>)</td>
+<td>返回 1970 年 1 月 1 日至今的毫秒数。</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Set方法组：</p>
+<table>
+<thead>
+<tr>
+<th>[setDate()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_setDate.asp">www.w3school.com.cn/jsref/jsref_setDate.asp</a>)</th>
+<th>设置 Date 对象中月的某一天 (1 ~ 31)。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[setMonth()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_setMonth.asp">www.w3school.com.cn/jsref/jsref_setMonth.asp</a>)</td>
+<td>设置 Date 对象中月份 (0 ~ 11)。</td>
+</tr>
+<tr>
+<td>[setFullYear()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_setFullYear.asp">www.w3school.com.cn/jsref/jsref_setFullYear.asp</a>)</td>
+<td>设置 Date 对象中的年份（四位数字）。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var d=new Date();</span><br><span class="line">//			d.setDate(12);</span><br><span class="line">			d.setMonth(1)//0</span><br><span class="line">			document.write(d)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="math-算数-对象："><a href="#math-算数-对象：" class="headerlink" title="math(算数)对象："></a><strong>math(算数)对象：</strong></h3><img src="https://pic.imgdb.cn/item/61388b7444eaada7390ea594.jpg">
+
+<img src="https://pic.imgdb.cn/item/61388b8444eaada7390ec015.jpg">
+
+<table>
+<thead>
+<tr>
+<th>[abs(x)](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_abs.asp">www.w3school.com.cn/jsref/jsref_abs.asp</a>)</th>
+<th>返回数的绝对值。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>X：表示参数</p>
+<table>
+<thead>
+<tr>
+<th>[floor(x)](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_floor.asp">www.w3school.com.cn/jsref/jsref_floor.asp</a>)</th>
+<th>对数进行下舍入。</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[ceil(x)](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_ceil.asp">www.w3school.com.cn/jsref/jsref_ceil.asp</a>)</td>
+<td>对数进行上舍入。</td>
+<td></td>
+</tr>
+<tr>
+<td>[max(x,y)](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_max.asp">www.w3school.com.cn/jsref/jsref_max.asp</a>)</td>
+<td>返回 x 和 y 中的最高值。</td>
+<td></td>
+</tr>
+<tr>
+<td>[min(x,y)](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_min.asp">www.w3school.com.cn/jsref/jsref_min.asp</a>)</td>
+<td>返回 x 和 y 中的最低值。</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>随机数：</p>
+<table>
+<thead>
+<tr>
+<th>[random()](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_random.asp">www.w3school.com.cn/jsref/jsref_random.asp</a>)</th>
+<th>返回 0 ~ 1 之间的随机数。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>四舍五入：</p>
+<table>
+<thead>
+<tr>
+<th>[round(x)](mk:@MSITStore:D:\第1小节\day 03 web前端基础与安全分析\手册\W3School离线手册.chm::/<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_round.asp">www.w3school.com.cn/jsref/jsref_round.asp</a>)</th>
+<th>把数四舍五入为最接近的整数。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>保留多少位小数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var  d=12.345232;</span><br><span class="line">document.write(d.toFixed(3))</span><br></pre></td></tr></table></figure>
+
+<h2 id="一、BOM浏览器对象模型"><a href="#一、BOM浏览器对象模型" class="headerlink" title="一、BOM浏览器对象模型"></a>一、<strong>BOM浏览器对象模型</strong></h2><img src="https://pic.imgdb.cn/item/61388bad44eaada7390efdfe.jpg">
+
+<h3 id="1-定义："><a href="#1-定义：" class="headerlink" title="1. 定义："></a>1. <strong>定义：</strong></h3><p><em><strong>*浏览器对象模型 (BOM)*</strong></em><em><strong>*，*</strong></em> <em><strong>*使 JavaScript 有能力与浏览器“对话”*</strong></em><em><strong>*、交互*</strong></em><em><strong>*。*</strong></em></p>
+<p>浏览器对象模型（Browser Object Model）尚无正式标准。</p>
+<h3 id="2-BOM的分类"><a href="#2-BOM的分类" class="headerlink" title="2. BOM的分类"></a>2. <strong>BOM的分类</strong></h3><img src="https://pic.imgdb.cn/item/61388bbd44eaada7390f1ca6.jpg">
+
+<p>1.window对象———-是浏览器对象模型中的顶层对象</p>
+<p>2.navigator对象———包含有关访问者的信息</p>
+<p>3.screen对象————-包含用户屏幕的信息</p>
+<p>4.history对象———–包含浏览器历史</p>
+<p>5.location对象———-用于获取当前页面地址</p>
+<p>6.document对象———-操作HTML标签、cookie</p>
+<h3 id="1-Window对象"><a href="#1-Window对象" class="headerlink" title="1. Window对象"></a>1. <strong>Window对象</strong></h3><p>所有浏览器都支持 <em><strong>*window*</strong></em> 对象。它表示浏览器窗口。</p>
+<p>prompt函数：用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var n=prompt(&quot;请输入.....&quot;)</span><br><span class="line">			document.write(n)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>alert函数——警告框</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			alert(&quot;123&quot;)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>confirm函数——确认框</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var n=confirm(&quot;你确定吗？&quot;)//返回结果布尔类型</span><br><span class="line">			if(n==true)&#123;</span><br><span class="line">				for(var i=1;i&lt;=10;i++)&#123;</span><br><span class="line">					alert(i)</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;else&#123;</span><br><span class="line">				document.write(&quot;你好呀&quot;)</span><br><span class="line">			&#125;</span><br><span class="line">			document.write(n)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>close函数</p>
+<p>​    关闭顶层窗口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			function fn1()&#123;</span><br><span class="line">				window.close()</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>open函数</p>
+<p>​    格式：</p>
+<p>​        window.open(“弹出窗口的url”,”窗口名称”,”窗口特征1=值,窗口特征2=值”);</p>
+<p>​    参数</p>
+<img src="https://pic.imgdb.cn/item/61388bf544eaada7390f6a48.jpg">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			function fn1()&#123;</span><br><span class="line">				for (var i=1;i&lt;=10;i++) &#123;</span><br><span class="line">					window.open(&quot;https://www.baidu.com&quot;,i,&quot;height=200px,width=300px&quot;);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-Location对象"><a href="#1-Location对象" class="headerlink" title="1. Location对象"></a>1. <strong>Location对象</strong></h3><p>window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			document.write(location.search)</span><br><span class="line">			document.write(location.href)</span><br><span class="line">			document.write(location.host)</span><br><span class="line">			document.write(location.port)</span><br><span class="line">			document.write(location.protocol)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>search：？问号后面的</p>
+<p>href：完整的</p>
+<p>host:主机名</p>
+<p>port:当前的端口号</p>
+<p>protocol：返回当前的协议</p>
+<p>1.加载一个新的网页——assign（url）</p>
+<p>注意：历史记录有记录 ctrl+H</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			function fn1()&#123;</span><br><span class="line">				location.assign(&quot;https://www.baidu.com&quot;)</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2.刷新当前页面 reload()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			function fn1()&#123;</span><br><span class="line">				location.reload()</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3.替换当前页面</p>
+<p>​    replace(url)——历史记录会覆盖现有的历史记录</p>
+<h3 id="1-History对象"><a href="#1-History对象" class="headerlink" title="1. History对象"></a>1. <strong>History对象</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			function fn1()&#123;</span><br><span class="line">				history.back()//后退</span><br><span class="line">			&#125;</span><br><span class="line">			function fn2()&#123;</span><br><span class="line">				history.forward()//前进</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-navigator对象的介绍"><a href="#1-navigator对象的介绍" class="headerlink" title="1. navigator对象的介绍"></a>1. <strong>navigator对象的介绍</strong></h3><p>window.navigator 对象包含有关访问者浏览器的信息。</p>
+<p>appName 属性返回浏览器的应用程序名称：</p>
+<p>appCodeName 属性返回浏览器的应用程序代码名称：</p>
+<p>appVersion  返回浏览器的平台和版本信息</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_window_navigator.asp">https://www.w3school.com.cn/js/js_window_navigator.asp</a></p>
+<h3 id="2-screen-对象包含有关用户屏幕的信息。"><a href="#2-screen-对象包含有关用户屏幕的信息。" class="headerlink" title="2. screen 对象包含有关用户屏幕的信息。"></a>2. <strong>screen 对象包含有关用户屏幕的信息。</strong></h3><p>width：宽度</p>
+<p>height:高度</p>
+<p>screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去诸如窗口工具条之类的界面特征。</p>
+<h3 id="3-延时器与定时器【重点】"><a href="#3-延时器与定时器【重点】" class="headerlink" title="3. 延时器与定时器【重点】"></a>3. <strong>延时器与定时器【重点】</strong></h3><p>设定的时间间隔之后来执行代码</p>
+<p>而不是在函数被调用后立即执行</p>
+<p>setTimeout()     未来的某时执行代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var t=setTimeout(&quot;javascript语句&quot;,毫秒)</span><br></pre></td></tr></table></figure>
+
+<p>案例代码：设置延时器与清除延时器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var t;//为什么t声明在这儿？？</span><br><span class="line">			function fn1()&#123;</span><br><span class="line">				alert(&quot;123&quot;)</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			function fn2()&#123;</span><br><span class="line">				t=setTimeout(&quot;fn1()&quot;,3000);</span><br><span class="line">			&#125;</span><br><span class="line">			function fn3()&#123;</span><br><span class="line">				clearTimeout(t);				</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>定时器：</p>
+<p>tt=setInterval(函数名,毫秒值);</p>
+<p>​    当我隔多少秒调用这个函数，周期性的调用</p>
+<p>clearInterval(tt)</p>
+<p>​    清除定时或者延时的效果用这个</p>
+<h2 id="一、DOM对象"><a href="#一、DOM对象" class="headerlink" title="一、DOM对象"></a>一、<strong>DOM对象</strong></h2><h2 id="1什么是DOM？"><a href="#1什么是DOM？" class="headerlink" title="1什么是DOM？"></a><strong>1什么是DOM？</strong></h2><p>Js通过DOM来操作HTML标签元素！</p>
+<p>文档对象模型图：</p>
+<img src="https://pic.imgdb.cn/item/61388c6744eaada739100e98.jpg">
+
+<p>2.通过js来获取html标签、属性【控制它】</p>
+<p>A.通过id选择器来获取html标签的控制权，只能获取1个，而且是第1个。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var pp1=document.getElementById(&quot;p1&quot;);</span><br><span class="line">			document.write(pp1.innerText)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>innerText:获取、修改文本</p>
+<p>B. 通过name属性来获取html的控制权， 能获取多个——结果是一个数组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			 var arr=document.getElementsByName(&quot;sex&quot;);</span><br><span class="line">			 for (var i=0;i&lt;arr.length;i++) &#123;</span><br><span class="line">			 	document.write(arr[i].value)</span><br><span class="line">			 &#125;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>B. 通过指定标签——结果是数组</p>
+<p>C. 通过类名——结果是数组 </p>
+<p>Innertext与innerHTML的区别！！！</p>
+<p>通过js的style对象来更改html标签的属性值： </p>
+<p>Js对象.style.属性=”属性值”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			document.getElementById(&quot;p1&quot;).style.color=&quot;red&quot;</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Js.src=”地址”  通过js来设置图片的路径</p>
+<p>通过className来获取、设置html标签的属性、属性值；</p>
+<p>存在问题：  获得是underfind</p>
+<p>关于js获取html DOM 节点 </p>
+<p>注意：notetype【节点的类型】、nodeValue[节点的值]、nodeName</p>
+<img src="https://pic.imgdb.cn/item/61388ca244eaada7391061ec.jpg">
+
+<img src="https://pic.imgdb.cn/item/61388cad44eaada739106fcf.jpg">
+
+<p>获取第一个子节点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			var uu1=document.getElementById(&quot;u1&quot;)</span><br><span class="line">			alert(uu1.firstChild.nodeName)</span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>节点列表：</p>
+<p>firstChild</p>
+<p>​    获取元素的首个子节点</p>
+<p>​    var aa=父节点对象.firstChild</p>
+<p>​    注意</p>
+<p>​        （1）.子节点并不一定都是元素节点，还有可能包含文本节点或者注释节点等节点。</p>
+<p>​        （2）. </p>
+<p>​    注意：关于拿不到nodeValue的值</p>
+<p>​        </p>
+<p>lastChild</p>
+<p>​    获取元素最后一个节点</p>
+<p>childNodes</p>
+<p>​    获取元素的节点列表</p>
+<p>​    数组</p>
+<p>​    var arr=对象名.childNodes()</p>
+<p>​    对象名.childNodes[1]</p>
+<p>previouSibling</p>
+<p>​    获取已知节点的前一个节点</p>
+<p>nextSibling</p>
+<p>​    获取已知节点的后一个节点</p>
+<p>parentNode    </p>
+<p>​    获取已知节点的父节点</p>
+<p>通过js操作html的属性：</p>
+<p>获取属性节点值</p>
+<p>​    元素节点.getAttribute(属性名)</p>
+<p>设置属性节点</p>
+<p>​    元素节点.setAttrbute(属性名，属性节点)</p>
+<p>删除属性节点</p>
+<p>​    元素节点.removeAttribute(属性名，属性节点)</p>
+<p>通过数组的方式去操作</p>
+<p>​      每个 HTML 属性—-是属性节点</p>
+<p>​        var dd=d1.attributes;</p>
+<p>​            元素对象.attributes   拿到某个元素节点里面所有的属性节点—–数组</p>
+<p>​        dd[下标].nodeName</p>
+<p>​            拿到指定元素的指定属性的名称</p>
+<p>​        dd[下标].nodevalue</p>
+<p>​            拿到指定元素的指定属性的值</p>
+<p>​        dd[下标].nodeType</p>
+<p>​            </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/08/javascript/" data-id="cktbcgmtw0000mouybmxngnx3" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/09/07/%E9%BB%91%E7%9B%92/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/09/08/javascript/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/07/%E9%BB%91%E7%9B%92/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/07/web%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/03/mysql%E5%91%BD%E4%BB%A4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/03/svn/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
